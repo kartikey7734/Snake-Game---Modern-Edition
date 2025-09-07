@@ -1,0 +1,7 @@
+{
+  "name": "Snake Game - Modern Edition",
+  "description": "A modern, web-based implementation of the classic Nokia Snake game, featuring theme switching, audio controls, and a unique, gamified code academy.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

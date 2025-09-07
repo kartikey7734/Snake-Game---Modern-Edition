@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game - Modern Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'dark-bg': '#0D1117',
+              'dark-surface': '#161B22',
+              'dark-border': '#30363D',
+              'dark-text': '#C9D1D9',
+              'dark-text-secondary': '#8B949E',
+              'light-bg': '#FFFFFF',
+              'light-surface': '#F6F8FA',
+              'light-border': '#D0D7DE',
+              'light-text': '#24292F',
+              'light-text-secondary': '#57606A',
+              'brand-green': '#28A745',
+              'brand-green-glow': 'rgba(74, 222, 128, 0.4)',
+              'brand-yellow': '#DBA40E',
+              'brand-yellow-glow': 'rgba(252, 211, 77, 0.4)',
+              'brand-blue': '#0969DA',
+              'brand-blue-glow': 'rgba(96, 165, 250, 0.4)',
+              'brand-purple': '#8A48AB',
+              'brand-purple-glow': 'rgba(192, 132, 252, 0.4)',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              fadeIn: 'fadeIn 0.5s ease-out forwards',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: 'Poppins', sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      :root {
+        --bg-color: #F6F8FA;
+        --surface-color: #FFFFFF;
+        --border-color: #D0D7DE;
+        --text-color: #24292F;
+        --text-secondary-color: #57606A;
+        --switch-bg: #D0D7DE;
+        --switch-thumb: #FFFFFF;
+      }
+      .dark {
+        --bg-color: #0D1117;
+        --surface-color: #161B22;
+        --border-color: #30363D;
+        --text-color: #C9D1D9;
+        --text-secondary-color: #8B949E;
+        --switch-bg: #30363D;
+        --switch-thumb: #8B949E;
+      }
+      .glow-border-green { box-shadow: 0 0 12px rgba(40, 167, 69, 0.6); }
+      .glow-border-yellow { box-shadow: 0 0 12px rgba(219, 164, 14, 0.6); }
+      .glow-border-blue { box-shadow: 0 0 12px rgba(9, 105, 218, 0.6); }
+      .glow-border-purple { box-shadow: 0 0 12px rgba(138, 72, 171, 0.6); }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "react/": "https://esm.sh/react@18.3.1/"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
